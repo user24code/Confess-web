@@ -4,12 +4,12 @@ const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBh
 
 const client = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
-// === KIRIM PESAN ===
+// --- KIRIM PESAN (HALAMAN PENGIRIM) ---
 async function sendConfess() {
     const message = document.getElementById("message").value;
 
     if (!message.trim()) {
-        alert("Tulis sesuatu dulu ya 🥺");
+        alert("Tulis pesan dulu ya 🥺💛");
         return;
     }
 
@@ -21,12 +21,12 @@ async function sendConfess() {
         alert("Gagal mengirim pesan!");
         console.log(error);
     } else {
-        alert("Pesan terkirim anonim! 💛");
+        alert("Pesan terkirim secara anonim! 💛");
         document.getElementById("message").value = "";
     }
 }
 
-// === AMBIL SEMUA PESAN (HALAMAN ADMIN) ===
+// --- AMBIL SEMUA PESAN (HALAMAN ADMIN) ---
 async function loadConfess() {
     const list = document.getElementById("confess-list");
 

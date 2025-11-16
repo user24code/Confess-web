@@ -1,21 +1,20 @@
 <!DOCTYPE html>
-<html lang="id">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kirim Confess</title>
+    <title>Confess Box — Kirim Pesan</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js" defer></script>
 </head>
+
 <body>
     <div class="container">
-        <h2>Kirim Confess Anonim</h2>
+        <h1>💛 Confess Box</h1>
+        <p>Kirim pesan anonim untuk Yusnida ✨</p>
 
-        <textarea id="pesan" placeholder="Tulis confess kamu..." required></textarea>
-        <button onclick="kirimPesan()">Kirim</button>
+        <textarea id="message" placeholder="Tulis pesanmu di sini..." rows="6"></textarea>
 
-        <p id="status" style="margin-top:10px; text-align:center;"></p>
+        <button onclick="sendConfess()">Kirim</button>
     </div>
-
-    <script src="script.js"></script>
 </body>
 </html>

@@ -1,10 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-    <title>Website Yusnida</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confess Box</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #111;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background: #222;
+            padding: 30px;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 400px;
+            box-shadow: 0 0 20px rgba(255,255,255,0.1);
+            text-align: center;
+        }
+        textarea {
+            width: 100%;
+            height: 150px;
+            border-radius: 10px;
+            padding: 15px;
+            font-size: 1rem;
+            border: none;
+        }
+        button {
+            background: #ffbb00;
+            color: #000;
+            border: none;
+            padding: 12px 20px;
+            margin-top: 15px;
+            border-radius: 10px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+        button:hover {
+            background: #e4a500;
+        }
+    </style>
 </head>
 <body>
-    <h1>Halo, ini website pertama Yusnida!</h1>
-    <p>Dibuat pakai GitHub Pages ✨</p>
+
+    <div class="container">
+        <h2>Kirim Confess Anonim</h2>
+
+        <!-- GANTI EMAIL DI BAWAH -->
+        <form action="https://formsubmit.co/EMAILKAMU" method="POST">
+            <textarea name="pesan" placeholder="Tulis confess kamu di sini..." required></textarea>
+
+            <!-- menyembunyikan formsubmit redirect -->
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://google.com">
+
+            <button type="submit">Kirim</button>
+        </form>
+    </div>
+
 </body>
 </html>
